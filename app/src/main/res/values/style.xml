@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AccountTextStyle">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">20sp</item>
+        <!-- 最多显示1行 -->
+        <item name="android:maxLines">1</item>
+        <!-- 垂直滚动条 -->
+        <item name="android:scrollbars">vertical</item>
+        <!-- 单行? -->
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="LoginEditTextTheme" parent="AccountTextStyle">
+        <item name="android:textColorHint">@color/white</item>
+        <!-- 光标颜色 -->
+        <item name="android:textCursorDrawable">@drawable/cursor</item>
+        <!-- 下划线颜色 -->
+        <item name="android:backgroundTint">@color/transparent</item>
+        <!-- 选中文本的背景颜色 -->
+        <item name="android:textColorHighlight">@color/theme1</item>
+        <!-- <item name="android:textSelectHandle">@color/alpha90_green</item> -->
+        <!-- 小水滴图标 -->
+        <item name="android:textSelectHandleLeft">@drawable/custom_text_select_handle_left_material</item>
+        <item name="android:textColorHighlightInverse">@drawable/custom_text_select_handle_middle_material</item>
+        <item name="android:textSelectHandleRight">@drawable/custom_text_select_handle_right_material</item>
+        <!-- 行间距 默认间距的倍数 -->
+        <!-- android:lineSpacingMultiplier="20" -->
+        <!-- 行间距 固定值 -->
+        <!-- <item name="android:lineSpacingExtra">10dp</item> -->
+    </style>
+    <style name="ClickableTextView">
+        <item name="android:textColor">@drawable/bg_hypertext</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="ActionMenuTextStyle" parent="TextAppearance.AppCompat.Widget.ActionBar.Menu">
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="actionBarTheme" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+    </style>
+
+    <style name="actionBarPopupTheme" parent="ThemeOverlay.AppCompat.Light">
+    </style>
+
+    <style name="PhotoPickerTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/red</item>
+        <item name="actionMenuTextAppearance">@style/ActionMenuTextStyle</item>
+        <!--<item name="actionBarTheme">@style/actionBarTheme</item>-->
+        <!--<item name="actionBarPopupTheme">@style/actionBarPopupTheme</item>-->
+    </style>
+</resources>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background8">
+
+    <LinearLayout
+        android:id="@+id/register_back_layout"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="5dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp">
+
+        <Button
+            android:id="@+id/login_back"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_web_back"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"></Button>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/register_title_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/register_back_layout"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="100dp"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/register_title_layout"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="25dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/underline"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/login_username"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@+id/clear_account_iv"
+                android:hint="请输入用户名"
+                android:inputType="text|textEmailAddress" />
+
+            <ImageView
+                android:id="@+id/clear_account_iv"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/clear"
+                android:visibility="invisible" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_password_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/underline"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/login_password"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@id/clear_password_iv"
+                android:hint="@string/input_password"
+                android:inputType="textPassword"
+                android:longClickable="false" />
+
+            <ImageView
+                android:id="@+id/clear_password_iv"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/clear"
+                android:visibility="invisible" />
+
+            <CheckBox
+                android:id="@+id/password_visibility_cb"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="5dp"
+                android:layout_toStartOf="@id/clear_password_iv"
+                android:background="@drawable/password_eye"
+                android:button="@null"
+                android:visibility="invisible"
+                tools:ignore="TouchTargetSizeCheck" />
+
+        </RelativeLayout>
+
+        <RadioGroup
+            android:id="@+id/identity_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/volunteer_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="我是志愿者" />
+
+            <RadioButton
+                android:id="@+id/manager_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我是管理员" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/login_btn"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/bg_btn_login"
+            android:text="@string/login"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_forget_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/forget_password"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/register_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="20dp"
+                android:text="@string/click_register"
+
+                tools:ignore="TouchTargetSizeCheck" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_terms_of_service_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="42.7dp">
+
+    </LinearLayout>
+
+</RelativeLayout>
